@@ -8,10 +8,13 @@ layout: default
         {% include header.html %}
       {% endif %}
       {% if page.layout != 'article' %}
-        {% include navigation.html %}
+        <div class="site-nav-container">
+          {% include navigation.html %}
+          {% include language-switcher.html %}
+        </div>
       {% endif %}
+      
     </div>
-    {% include language-switcher.html %}
     {{ content }}
     {% include footer.html %}
 </body>

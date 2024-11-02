@@ -68,9 +68,6 @@ header.site-header {
       }
     }
   }
-
-  
-  
 }
 
 // Footer (from previous example)
@@ -86,15 +83,17 @@ header.site-header {
   }
 }
 
-  // Navigation
-.site-nav-container{
+// Navigation
+.site-nav-container {
   width: 75%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
   .site-nav {
     // background-color: $header-background-color;
     padding: 10px 0;
     margin: 1.5rem 0.5rem 0 0.5rem;
-    max-width: 1200px;  
+    max-width: 1200px;
     @include clearfix;
 
     .nav-toggle {
@@ -109,8 +108,7 @@ header.site-header {
       right: 20px;
     }
 
-    .nav-menu {   
-
+    .nav-menu {
       list-style-type: none;
       display: flex;
       justify-content: flex-start;
@@ -118,10 +116,13 @@ header.site-header {
       font-weight: bold;
       max-width: 1200px;
       width: 100%;
+      margin-bottom: 0.2em;
 
       li {
         position: relative;
         padding: 0 1em;
+        padding-bottom: 0.6em;
+
         a {
           display: block;
           text-decoration: none;
@@ -137,6 +138,17 @@ header.site-header {
           }
         }
 
+        //   &:after {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     top: 100%; // Position just below the button
+        //     left: 0;
+        //     width: 100%;
+        //     height: 20px; // Height of the hover bridge
+        //     background: transparent; // Invisible bridge
+        // }
+
         &:hover {
           .dropdown-content {
             opacity: 1;
@@ -146,6 +158,9 @@ header.site-header {
       }
 
       .dropdown-content {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         display: block;
         opacity: 0;
         visibility: hidden;
@@ -153,29 +168,27 @@ header.site-header {
         top: 100%;
         left: 0;
         background-color: white;
-        min-width: $nav-button-width;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         z-index: 1;
 
         @include transition(visibility);
         @include transition(opacity);
-      
+
         li {
-            border-top: 1px solid #f0f0f0;
-      
-            &:first-child {
-                border-top: none;
-            }
-      
-            a {
-                padding: 10px;
-                text-align: left;
-      
-                &:hover {
-                    background-color: #f1f1f1;
-                    color: black;
-                }
-            }
+          border-top: 1px solid #f0f0f0;
+          display: inline-block;
+          white-space: nowrap;
+          padding-bottom: 0;
+          min-width: $nav-button-width;
+
+          &:first-child {
+            border-top: none;
+          }
+
+          a {
+            padding: 0.5em 0;
+            text-align: left;
+          }
         }
       }
     }
@@ -210,4 +223,3 @@ header.site-header {
     }
   }
 }
-

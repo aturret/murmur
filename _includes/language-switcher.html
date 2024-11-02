@@ -1,9 +1,9 @@
-<div class="lang-div d-flex flex-column">
+<div class="lang-div">
     {% unless page.lang-exclusive and page.lang-exclusive | uniq | size == 1 and page.lang-exclusive[0] == site.active_lang %}
+        <p class="lang-name-box"></p>
         <i class="fa-solid fa-language"></i>
         {% for tongue in site.languages %}
-            {% if tougue != site.active_lang %}
-                <p class="lang-name-box">
+            {% unless tongue == site.active_lang %}
                     {% if page.lang-exclusive %}
                         {% assign is_lang_exclusive = false %}
                         {% for lang in page.lang-exclusive %}
@@ -17,16 +17,16 @@
                             </a> {% endcomment %}
                         {% else %}
                             <a class="lang-name" {% static_href %}href="{% if tongue == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}"{% endstatic_href %}>
-                                {{ site.data.locales[tongue].tabs.lang_name }}
+                                {{ site.data.locales[tongue].lang_name }}
                             </a>
                         {% endif %}
                     {% else %}
                         <a class="lang-name" {% static_href %}href="{% if tongue == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}"{% endstatic_href %}>
-                            {{ site.data.locales[tongue].tabs.lang_name }}
+                            {{ site.data.locales[tongue].lang_name }}
                         </a>
                     {% endif %}
-                </p>
-            {% endif %}  
+            {% endunless %}  
         {% endfor %}
+        </p>
     {% endunless %}
 </div>

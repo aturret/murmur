@@ -58,3 +58,13 @@ languages: ["zh-CN", "en"]
 default_lang: "zh-CN"
 exclude_from_localization: ["javascript", "images", "assets", "public"]
 parallel_localization: false
+
+# jekyll-archives
+jekyll-archives:
+  enabled: []
+  layout: 
+    category: category
+    tag: tag
+  permalinks:
+    tag: '/tag/:name/'
+    category: '/category/:name/'

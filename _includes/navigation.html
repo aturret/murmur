@@ -1,18 +1,29 @@
-<div class="site-nav-container">
 <nav class="site-nav" role="navigation">
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
         <span class="nav-toggle-icon"></span>
       </button>
       <ul class="nav-menu">
+        {% for category in site.data.locales[site.active_lang].categories %}
+          <li class="nav-menu-item{% if category.subcategories %} dropdown{% endif %}">
+            <a href ="{{site.baseurl}}/category/{{category.name}}/">{{category.showcase_name}}</a>
+          {% if category.subcategories %}
+            <ul class="dropdown-content">
+              {% for subcategory in category.subcategories %}
+                <li><a href="{{site.baseurl}}/category/{{subcategory.name}}/">{{subcategory.showcase_name}}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </li>
+        {% endfor %}
         <li class="nav-menu-item dropdown">
-          <a href="{{ site.baseurl }}/" class="nav-menu-link {% if page.url == "/index.html" %}nav-menu-link--active{% endif %}">Home</a>
+          <a href="{{ site.baseurl }}/about.html">{{site.data.locales[site.active_lang].about}}</a>
           <ul class="dropdown-content">
-            <li><a href="#">hello</a></li>
-          </ul>
+            <li><a href="/archives/">{{site.data.locales[site.active_lang].post_archives}}</a></li>
+            {% comment %} <li><a href="#">{{site.data.locales[site.active_lang].life_archives}}</a></li> {% endcomment %}
         </li>
+        </ul>
         <li class="nav-menu-item">
-          <a href="{{ site.baseurl }}/about.html" class="nav-menu-link {% if page.url == "/about.html" %}nav-menu-link--active{% endif %}">About</a>
+          <a href="{{site.data.locales[site.active_lang].another_blog_url}}" target="_blank">{{site.data.locales[site.active_lang].another_blog}} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7em"></i></a>
         </li>
       </ul>
 </nav>
-</div>
