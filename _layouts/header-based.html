@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<body>
+    <div class="header-and-nav">
+      {% if page.layout != 'article' %}
+        {% include header.html %}
+      {% endif %}
+      {% if page.layout != 'article' %}
+        {% include navigation.html %}
+      {% endif %}
+    </div>
+    {% include language-switcher.html %}
+    {{ content }}
+    {% include footer.html %}
+</body>

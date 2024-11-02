@@ -34,7 +34,7 @@
   --color-border: #eee;
   --color1: #1565C0;
   --color2: #999;
-  --title-font: Georgia,"Microsoft YaHei",sans-serif;
+  // --title-font: Georgia,"Microsoft YaHei",sans-serif;
 
   --color-desc: #f9f8e9;
   --particle-len: 50px;
@@ -71,29 +71,10 @@ html {
 }
 
 body {
-  color: var(--color-text);
-  font-family: Georgia,'Source Sans Pro', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.6rem;
-
-
-/*  background-image: linear-gradient(rgba(50, 50, 50, .1) 1px, transparent 1px);
-  background-size: 100% 28px;*/
 
 
 }
 
-/*@media screen and (min-width: 700px) {
-  body {
-    background-size: 100% 32px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  body {
-    background-size: 100% 36px;
-  }
-}*/
 
 img {
   display: block;
@@ -105,11 +86,4 @@ img {
 a:hover, a:visited, a:active {
   color: #444;
   text-decoration: none;
-}
-
-time {
-  color: var(--color2);
-  font-size: 15px;
-  font-family: "Segoe UI",Optima,"Helvetica Neue",sans-serif;
-  text-transform: uppercase;
 }

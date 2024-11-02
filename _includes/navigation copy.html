@@ -1,0 +1,21 @@
+<nav class="header__nav" role="navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <ul class="nav-menu">
+        {% for item in site.data.navigation %}
+          <li class="nav-menu-item">
+            <a href="{{ item.url }}" class="nav-menu-link {% if page.url == item.url %}nav-menu-link--active{% endif %}">{{ item.name }}</a>
+            {% if item.submenu %}
+              <ul class="nav-menu-submenu">
+                {% for subitem in item.submenu %}
+                  <li class="nav-menu-submenu-subitem">
+                    <a href="{{ subitem.url }}" class="nav-menu-link {% if page.url == subitem.url %}nav-menu-link--active{% endif %}">{{ subitem.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>

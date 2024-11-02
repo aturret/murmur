@@ -1,4 +1,3 @@
-source "https://ruby.taobao.org"
 ruby RUBY_VERSION
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -9,7 +8,7 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.6.3"
+gem "jekyll", "4.3.4"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.0"
@@ -24,3 +23,19 @@ gem "jekyll-paginate"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
 end
+
+gem "html-proofer", "~> 5.0", group: :test
+
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
+end
+
+group :jekyll_plugins do
+  # gem "jekyll-polyglot", git:"https://github.com/aturret/polyglot.git"
+  gem "jekyll-polyglot"
+  gem "jekyll-seo-tag", git:"https://github.com/aturret/jekyll-seo-tag-polyglot.git"
+  # gem "jekyll-feed"
+end
+
+gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]

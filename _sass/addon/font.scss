@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Chinese-Italic'; /* Your Chinese font */
+    src: local('Kaiti'), local('楷体'), local('Source Han Serif SC');
+    font-style: italic; /* Disable italic for Chinese characters */
+    unicode-range: U+4E00-9FFF; /* Range for Chinese characters */
+  }
+  
+  @font-face {
+    font-family: 'Latin-Italic'; /* Your Latin font */
+    src: local('Microsoft Yahei'), local('Times New Roman'), local('Georgia'),
+      local('Times'), local('serif');
+    font-style: normal; /* Enable italic for Latin characters */
+    unicode-range: U+0000-00FF; /* Range for Latin characters */
+  }
+
+  @font-face {
+    font-family: 'NotoColorEmojiLimited';
+    unicode-range: U+1F1E6-1F1FF;
+    src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+  }

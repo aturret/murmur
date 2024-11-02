@@ -9,6 +9,7 @@ cover_display: True
 location: Florence, Italy
 description: Murmur theme presents your words & photographs in a handsome, agreeable manner.
 tail: I'm a tail
+lang: zh-CN
 ---
 ---
 Landing somewhere between a scholarly publication and an adventurers notebook, the Murmur theme presents your words & photographs in a handsome, agreeable manner. It is well behaved on both mobile & desktop and radically minimal in its footprint. Charged and ready for deployment to Github Pages.

@@ -1,18 +1,21 @@
 # Site configuration
-domain: "http://songroger.win"
-baseurl: "/murmur" # the subpath of your site, e.g. /blog
-url: "http://songroger.github.io/" # the base hostname & protocol for your site
+domain: "http://google.com"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://blog.aturret.com/" # the base hostname & protocol for your site
 permalink: /:title/
 avatar: /murmur/assets/avatar.jpg
 about: /murmur/assets/about.jpg
 favicon: /murmur/assets/favicon.ico
 basecss: 
 # Theme specific configuration
-title: songroger
-description: >
-  Hi there, My name is Luozhan.Song, usually I use "songroger" as my ID everywhere.
-  I was born and raised in Hunan China. 
-  I'm really fond of beautiful design, drawing etc.
+title: 
+  zh-CN: 交界处的小炮楼
+  en: ThereIsATurret
+  
+description:
+  zh-CN: 无病呻吟又一天，闭门造车创奇迹
+  en: Keep cursing day by day, dream of running stray away
+  
 
 # Contact and social media links
 twitter_username: songrogero
@@ -36,5 +39,22 @@ enable_comment: false
 paginate: 5
 paginate_path: /archive/page:num
 
+comments:
+  provider: waline
+  waline:
+    server_url: https://my-waline-gold-xi.vercel.app
+    lang: zh-CN
+
 plugins:
     - jekyll-paginate
+    - jekyll-polyglot
+
+sass:
+  style: compressed
+  sourcemap: never
+
+# polyglot configuration
+languages: ["zh-CN", "en"]
+default_lang: "zh-CN"
+exclude_from_localization: ["javascript", "images", "assets", "public"]
+parallel_localization: false

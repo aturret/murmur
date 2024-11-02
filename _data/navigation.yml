@@ -1,0 +1,20 @@
+category-1:
+  name: 吹牛逼
+  url: /categories/吹牛逼
+  submenu:
+    - subcatecory-1:
+      name: 
+      url: 
+    - subcatecory-2:
+    - subcatecory-3:
+
+
+category-2:
+  name: 
+  submenu:
+    - 
+
+menu-item-3:
+  name: 
+  submenu:
+    - 

@@ -1,0 +1,35 @@
+@import "../addon/variables";
+@import "../addon/commons";
+
+.post-list {
+  width: 75%;
+  max-width: $container-width;
+  margin: 2.7rem auto;
+  padding: $padding;
+  line-height: 2rem;
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  article {
+    margin-bottom: 2rem;
+    padding-bottom: 2.5rem;
+  }
+  .post-metadata{
+    color: var(--text-hyperlink-color);
+    a{
+        color: var(--text-hyperlink-color);
+        &:hover{
+            color: var(--text-hyperlink-hover-color);
+        }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .post-list {
+    width: 95%;
+  }
+}

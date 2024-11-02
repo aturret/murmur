@@ -1,0 +1,30 @@
+@import 'font';
+
+// Color Variables
+$primary-color: #d0e0eb;
+$secondary-color: #2ecc71;
+$title-text-color: #d1c3c3;
+$header-background: url("/assets/images/header-bg.jpg") no-repeat center center;
+$header-background-size: cover;
+$boarder-color: #e5e5e5;
+
+// Spacing
+$container-width: 1200px;
+$padding: 20px;
+
+// Navigation Button Width
+$nav-button-width: 140px;
+
+//fonts
+$font-family-base: 'Source Han Serif SC', 'Georgia', sans-serif !default;
+$chinese-font-family: 'Source Han Serif SC', sans-serif !default;
+$italic-font-family: 'Chinese-Italic', 'Latin-Italic', sans-serif !default;
+$chinese-quote-font-family: 'KaiTi', 'STKaiti', 'FangZhengKaiTi',
+  'Source Han Serif SC', serif, sans-serif !default;
+$language-flag-font: 'NotoColorEmojiLimited', sans-serif !default;
+$latin-font-family: 'Times New Roman', 'Georgia', serif !default;
+$font-family-heading: Lato, 'Microsoft Yahei', sans-serif !default;
+
+
+// Font Styles
+$font-size-base: 22px;

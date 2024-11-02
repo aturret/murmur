@@ -1,0 +1,10 @@
+<div id="waline" style="max-width: 800px; margin: 0 auto"></div>
+<script type="module">
+      import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3.3.2/dist/waline.js';
+
+      const waline = init({
+        el: '#waline',
+        serverURL: '{{ site.comments.waline.server_url }}',
+        lang: '{{ site.active_lang | default: site.comments.waline.lang }}',
+      });
+</script>
